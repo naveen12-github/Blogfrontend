@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Keyframes for Revealing Text */
+@keyframes reveal {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Keyframes for Fade-In */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Keyframes for Fade-In-Up */
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Tailwind Custom Animation Classes */
+  .animate-reveal {
+    animation: reveal 1s ease-out;
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 1s ease-out;
+  }
+  
+  .animate-fade-in-up {
+    animation: fade-in-up 1s ease-out;
+  }
+  
+  .animate-glow-neon {
+    animation: glow-neon 2s infinite ease-in-out;
+  }
+  
+  /* Keyframes for Neon Glow */
+  @keyframes glow-neon {
+    0% {
+      box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.4),
+        0 0 30px rgba(255, 165, 0, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(255, 165, 0, 0.7), 0 0 30px rgba(255, 165, 0, 0.6),
+        0 0 40px rgba(255, 165, 0, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.4),
+        0 0 30px rgba(255, 165, 0, 0.3);
+    }
+  }
+  @keyframes slide {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-slide {
+    display: flex;
+    animation: slide 20s linear infinite;
+    width: calc(200% + 8px); /* Allows seamless looping */
+}
+
